@@ -1,0 +1,32 @@
+[    
+    {
+        "name":"Artesania",    
+        "difficulty": 5 ,    
+        "duration": 2,        
+        "season":"spring"       
+    },
+    {
+        "name":"Gastronomia",    
+        "difficulty": 1 ,    
+        "duration": 8,        
+        "season":"spring"       
+    },
+    {
+        "name":"Discotecas",    
+        "difficulty": 5 ,    
+        "duration": 2,        
+        "season":"summer"       
+    },
+    {
+        "name":"carnaval",    
+        "difficulty":2 ,    
+        "duration": 4,        
+        "season":"summer"       
+    },
+    {
+        "name":"Compras",    
+        "difficulty":1 ,    
+        "duration": 6,        
+        "season":"summer"       
+    }
+]
