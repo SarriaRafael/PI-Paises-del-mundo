@@ -65,11 +65,8 @@ export default function Nwctt(){
             }
 
             function traerunpais(e){
-               
-               let h = cosas.filter((k) => {  // toLocaleLowerCase()  includes()
-                   
-                   if(k.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))return k;
-                }  );
+               // toLocaleLowerCase()  includes()
+               let h = cosas.filter((k) => k.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())  );
                
                 h = h.map(x=> {return {id: x.id, name: x.name}} );
                setDsp(h);

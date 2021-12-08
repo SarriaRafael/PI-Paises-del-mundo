@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const { Country, Activity } = require('../db');
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
 const rutrafuno = require('./countries.js');
@@ -12,7 +13,10 @@ router.use('/countries', rutrafuno);
 router.use('/activity', rutrafdos);
 
 //  ¿¿__Ruta principal__??
+
 router.get('/', function(req, res, next){
+    
+   
    
     res.sendStatus(200);
   

@@ -19,11 +19,8 @@ export default function Menu(){
    
 
     function algotraer(e){
-               
-        let h = paismen.filter((k) => {  // toLocaleLowerCase()  includes()
-            
-            if(k.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))return k;
-         }  );
+               // toLocaleLowerCase()  includes()
+        let h = paismen.filter((k) => k.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())  );
          console.log(h);
          h = h.map(x=> {return {id: x.id, name: x.name}} );
          setDsp(h);     
@@ -33,10 +30,9 @@ export default function Menu(){
          console.log("dentro de activmen");
                console.log(activmen);
                setActivfil(e.target.value);
-        let h = activmen.filter((k) => {  // toLocaleLowerCase()  includes()
-            
-            if(k.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))return k;
-         }  );
+               // toLocaleLowerCase()  includes()
+        let h = activmen.filter((k) => k.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()));
+         
          console.log(h);
          h = h.map(x=> {return {id: x.id, name: x.name}} );
          setExisten(h)
@@ -59,7 +55,7 @@ export default function Menu(){
                let k = f.activities.filter(s=> s.name.toLocaleLowerCase().includes(activfil.toLocaleLowerCase()));
                if(k.length>0)n=n.concat(f);
                k=[];                
-            console.log("toca esto tambien esto tambien esto tambien esto tambien");
+            return console.log("toca esto tambien esto tambien esto tambien esto tambien");
           })   
           m=n;
         }
