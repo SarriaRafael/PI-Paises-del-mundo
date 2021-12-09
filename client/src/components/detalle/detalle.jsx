@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { useParams } from "react-router";
 import axios from 'axios'
 import { useEffect, useState } from "react";
+import "./detalle.css"
 
 export default function Detalle(){
     const [unpais, setUnpais]=useState({name: ""});
@@ -21,18 +22,19 @@ export default function Detalle(){
    
      },[id])        
 
-    return <div>
+    return <div id="tercer" >
         <h4> <Link to= "/home" > HOME </Link>  </h4> 
         <h3>El Detalle de cada País</h3>
-        <div> {unpais.name} </div>
-        <div> {unpais.continent} </div>
-        <div> {unpais.capital} </div>
-        <div> {unpais.subregion} </div>
-        <div> {unpais.area} </div>
-        <div> {unpais.population} </div>
-        <div> {unpais.id} </div>
-        { turis.map(m =>  <div key = {m.name} >  Actividad:   {m.name}  season:   {m.season}  difficulty {m.difficulty}  </div>)}
-       
+        <div> Nombre:  {unpais.name} </div>
+        <div> Continente: {unpais.continent} </div>
+        <div> Capital: {unpais.capital} </div>
+        <div> Subregion: {unpais.subregion} </div>
+        <div> Area: {unpais.area} </div>
+        <div> Poblacion: {unpais.population} </div>
+        <div> ID:  {unpais.id} </div>
+        <div id='actvlist' >
+             { turis.map(m =>  <div key = {m.name} > <div> Actividad:  </div> {m.name} <div>season:   {m.season}</div>  <div> difficulty {m.difficulty}</div>  </div>)}
+        </div>
        
         
         

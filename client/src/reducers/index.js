@@ -38,10 +38,10 @@ function rootstr(store= startstore, action){
                 console.log('lado 1');
                 console.log(a.name);
                     if (a.name > b.name) {
-                        return 1;
+                        return -1;
                     }
                     if (a.name < b.name) {
-                        return -1;
+                        return 1;
                     }                    
                         return 0;
                       })
@@ -51,10 +51,10 @@ function rootstr(store= startstore, action){
                     console.log('lado 2');
                     console.log(a.name);
                     if (a.name > b.name) {
-                        return -1;
+                        return 1;
                     }
                     if (a.name < b.name) {
-                        return 1;
+                        return -1;
                     }                    
                         return 0;
                       })

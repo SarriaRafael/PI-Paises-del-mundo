@@ -1,0 +1,27 @@
+
+#tercer{
+    
+    background: url("../img/turis18.png");
+ 
+   /* Full height    height: 65px;  */
+   
+   min-height: 97vh;
+ 
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-weight: 900;
+}
+
+#actvlist{
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 30%;
+    cursor: pointer;
+    
+    background: #0703ff1c;
+    color: rgb(64, 78, 4);
+    font-weight: 700;
+
+}

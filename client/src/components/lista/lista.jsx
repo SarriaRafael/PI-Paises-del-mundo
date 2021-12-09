@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import Elelmentos from '../elementos/elementos'
 import { useState } from "react";
+import  "./lista.css" 
 
 
 export default function Lista(){
@@ -41,10 +42,13 @@ export default function Lista(){
   }
 
 
-  return <div>
-      <button onClick={anterior} > <img src ='./botonizq' alt='<=' /> </button>  <button onClick={siguiente} > <img src ='./botonder' alt=' =>' /></button>
-        <div>Desde: {ini},  Hasta: {num}   </div>
-        <div>De un total de {lospaises.length} </div>
+  return <div className="list" >
+    <div>
+      <button onClick={anterior} id="botonizq" />  
+      <button onClick={siguiente} id="btnder" /> 
+    </div>    
+        <div className="indicador" >Desde: {ini},  Hasta: {num}   </div>
+        <div className="indicador" >De un total de {lospaises.length} </div>
       {decenas()}
       {arrlist.map((w) =>{
           return <Elelmentos key= {key++} id={w.id}  name= {w.name} imgflag={w.imgflag} continent= {w.continent} />

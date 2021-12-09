@@ -4,6 +4,7 @@
 }
 
 #segundo{
+    display: flex;
     background: url("../img/mundo_animado.gif");
  
    /* Full height    height: 65px;  */
@@ -16,7 +17,7 @@
    background-size: cover;
 }
 
-.cabiar{
+.cambiar{
     
     justify-content: center;
     align-items: center;

@@ -3,3 +3,25 @@
     display: flex;
     flex-direction: row;
 }
+.pares{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;    
+}
+
+.find{
+    background-color: #130fdf;
+    color: #f3f3f3;
+    font-weight: 600;
+    border-radius: 10%;
+}
+
+.rafboton {
+    border-radius: 30%;
+    cursor: pointer;
+    
+    background: #53ff03;
+    color: rgb(17, 0, 255);
+    
+  }

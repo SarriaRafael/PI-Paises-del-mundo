@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { filtros } from "../../actions";
 import Ordenar from "../ordenar/ordenar";
-//import './menu.css'
+import './menu.css'
 
 
 export default function Menu(){
@@ -68,15 +68,15 @@ export default function Menu(){
       
 
 
-    return <div>
-        
-               
-       <form>
+    return <div  >                 
+       
+           <div className="pares" >
                 <input type="text"   placeholder='Nombe'   onChange={(e) => activtraer(e)} /> 
-                Filtrar países por tipo de actividad turística <br/>                  
-                { existen.map(m =>  <div key = {m.name} >Actividad:   {m.name}    </div>)}
-                    <br/>
-               <label>Filtrar países por continente</label>
+                <label className="find" >Filtrar países por tipo de actividad turística </label>                
+                { existen.map(m =>  <div key = {m.name} className="ingresar" >Actividad:   {m.name}    </div>)}
+            </div>   
+            <div className="pares" > 
+               <label className="find" >Filtrar países por continente</label>
 
                <select name='filtro' onChange={(e) => setFiltcontin(e.target.value) }> 
                     <option value= "todos" >Todos</option>
@@ -88,17 +88,17 @@ export default function Menu(){
                     <option value= 'Oceania'>Oceania</option>
                </select> 
                
-               <button onClick={(e)=>handleChange(e)} >Aplicar Filtros</button>             
-       
-       </form> 
+               <button onClick={(e)=>handleChange(e)} className= "rafboton" >Aplicar Filtros</button>             
+            </div> 
+      
        <div>
-       <label>Encontrar un país por nombre</label> 
+       <label className="find" >Encontrar un país por nombre</label> 
        <input type="text"      onChange={(e) => algotraer(e)} /> <br/>
-       { dsp.map(m =>  <div key = {m.name} >Pais: <Link to= {`/detalle/${m.id}`} > {m.name} </Link>   </div>)}
+       { dsp.map(m =>  <div className="find" key = {m.name} >Pais: <Link to= {`/detalle/${m.id}`} className="find" > {m.name} </Link>   </div>)}
        </div>
-       <div>
+       
        <Ordenar/>
-       </div>
+       
       
 </div>
 }

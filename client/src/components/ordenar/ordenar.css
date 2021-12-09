@@ -1,0 +1,21 @@
+
+.mak{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;  
+      
+}
+
+.makle{
+    background-color: #130fdf;
+    color: #f3f3f3;
+    font-weight: 600;
+    border-radius: 10%;
+}
+#orden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;  
+}

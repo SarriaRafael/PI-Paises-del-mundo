@@ -1,9 +1,10 @@
 import {Link} from 'react-router-dom'
+import './elementos.css'
 
 export default function Elelmentos({id, name, imgflag, continent }){
-    return  <div>
+    return  <div className='contenendor' >
             
-            <h4> <Link to= {`/detalle/${id}`} > {name} </Link> contiente: {continent} </h4> 
+            <h4 className='element'  > <Link to= {`/detalle/${id}`} className='element'  > {name} </Link> contiente: {continent} </h4> 
                         
           </div>
             

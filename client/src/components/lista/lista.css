@@ -1,0 +1,33 @@
+.list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;  
+      
+}
+.indicador{
+    background-color: #130fdf;
+    color: #f3f3f3;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 10%;
+}
+#botonizq{
+    background: url("../img/botonIzqu.png");
+    padding: 0px;  
+    height: 45px;
+    width: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#btnder{
+    background: url("../img/botonDerecha.png");
+    padding: 0px;  
+    height: 45px;
+    width: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

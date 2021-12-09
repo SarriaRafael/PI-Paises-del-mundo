@@ -1,0 +1,14 @@
+.element{
+    background-color: #130fdf;
+    color: #f3f3f3;
+    font-weight: 600;
+    border-radius: 10%;
+}
+.contenendor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;  
+    height: 45px;
+    width: 380px;
+}

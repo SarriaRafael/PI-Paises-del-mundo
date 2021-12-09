@@ -13,7 +13,7 @@ export default function Home(){
 
   return  <div id="segundo" >
           <h1> HOME </h1>
-          <Link to="/activitynew"  className= "cabiar"   > ingresar nueva actividad</Link>
+          <Link to="/activitynew"  className= "cambiar"   > ingresar nueva actividad</Link>
           
                <Menu/>          
           
