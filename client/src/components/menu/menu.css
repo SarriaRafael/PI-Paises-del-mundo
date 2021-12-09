@@ -1,3 +1,5 @@
-div{
+
+.filtrosrafa{
     display: flex;
+    flex-direction: row;
 }

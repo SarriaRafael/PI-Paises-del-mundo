@@ -2,3 +2,29 @@
     display: flex;
     justify-content: space-between;
 }
+
+#segundo{
+    background: url("../img/mundo_animado.gif");
+ 
+   /* Full height    height: 65px;  */
+   
+   min-height: 97vh;
+ 
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.cabiar{
+    
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 75px;
+    background: #ff0000;
+    color: #FFF;
+    font-size: 20px;
+}

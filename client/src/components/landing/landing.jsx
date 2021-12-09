@@ -5,7 +5,7 @@ export default function Landing(){
        
 
 
-  return  <div>
+  return  <div className= "App">
           <h1>LANDING </h1>
           
 

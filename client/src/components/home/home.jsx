@@ -11,13 +11,11 @@ export default function Home(){
   dispatch(rafatrae());
   dispatch(rafaturist());
 
-  return  <div>
+  return  <div id="segundo" >
           <h1> HOME </h1>
-          <Link to="/activitynew"> ingresar nueva actividad</Link>
-          <div id='cuerpo' >
-               <Menu/>
-          </div>
+          <Link to="/activitynew"  className= "cabiar"   > ingresar nueva actividad</Link>
           
+               <Menu/>          
           
         </div>
           

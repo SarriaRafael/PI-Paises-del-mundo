@@ -21,7 +21,8 @@ export default function Menu(){
     function algotraer(e){
                // toLocaleLowerCase()  includes()
         let h = paismen.filter((k) => k.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())  );
-         console.log(h);
+         
+         if (e.target.value.length<1)h=[];
          h = h.map(x=> {return {id: x.id, name: x.name}} );
          setDsp(h);     
         
@@ -32,12 +33,10 @@ export default function Menu(){
                setActivfil(e.target.value);
                // toLocaleLowerCase()  includes()
         let h = activmen.filter((k) => k.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()));
-         
-         console.log(h);
+         if (e.target.value.length<1)h=[];         
+
          h = h.map(x=> {return {id: x.id, name: x.name}} );
-         setExisten(h)
-              
-        
+         setExisten(h);
      }
 
      let m=paismen;
@@ -70,9 +69,10 @@ export default function Menu(){
 
 
     return <div>
+        
                
        <form>
-                <input type="text"      onChange={(e) => activtraer(e)} /> 
+                <input type="text"   placeholder='Nombe'   onChange={(e) => activtraer(e)} /> 
                 Filtrar países por tipo de actividad turística <br/>                  
                 { existen.map(m =>  <div key = {m.name} >Actividad:   {m.name}    </div>)}
                     <br/>
@@ -87,12 +87,18 @@ export default function Menu(){
                     <option value= 'Europe' >Europa</option>
                     <option value= 'Oceania'>Oceania</option>
                </select> 
-               <br/> 
+               
                <button onClick={(e)=>handleChange(e)} >Aplicar Filtros</button>             
+       
        </form> 
+       <div>
        <label>Encontrar un país por nombre</label> 
        <input type="text"      onChange={(e) => algotraer(e)} /> <br/>
        { dsp.map(m =>  <div key = {m.name} >Pais: <Link to= {`/detalle/${m.id}`} > {m.name} </Link>   </div>)}
+       </div>
+       <div>
        <Ordenar/>
+       </div>
+      
 </div>
 }

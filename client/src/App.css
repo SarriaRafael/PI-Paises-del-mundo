@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+.App{
+  background: url("./components/img/turis15h.png");
+
+  /* Full height    height: 65px;  */
+  
+  min-height: 97vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

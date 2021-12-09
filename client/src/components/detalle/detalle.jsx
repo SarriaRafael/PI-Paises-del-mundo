@@ -1,39 +1,46 @@
 import { Link } from "react-router-dom"
 import { useParams } from "react-router";
-import { useSelector } from "react-redux";
 import axios from 'axios'
+import { useEffect, useState } from "react";
 
 export default function Detalle(){
-    let id= useParams().id
-    console.log(id);
-    let lospaises = useSelector((t)=>t.countries )
-    let unpais= lospaises.filter(p => p.id===id);
-    console.log(unpais);
-    let actividades=[];
-
-    
-
-    function unotraerafa(){
-        console.log("mostrando un pais");    
+    const [unpais, setUnpais]=useState({name: ""});
+    const [turis, setTuris]= useState([]);
+    let id= useParams().id;
+    useEffect(()=>{  
                     axios.get('http://localhost:3001/countries/'+id)  
                     .then((pmf) => { 
-                           console.log(pmf.data);
-                           actividades = pmf.data.activities
-                           console.log(actividades)
-                    })
-                    .catch(error =>{console.log('esto es lo que pasa   :'+error)});            
-    }
+                         let d= pmf.data
+                         setUnpais(pmf.data);    
+                         console.log(pmf.data)   
+                         setTuris(pmf.data.activities)  ;
 
-    unotraerafa();
-
-    
-
+                         return d                 
+                    }) 
+                    .catch(error =>{console.log('esto es lo que pasa   :'+error)});
+   
+     },[id])        
 
     return <div>
-        <h3>El Detalle de cada País</h3>
-        <h2>{unpais[0].name}</h2>
-        <img src={unpais[0].imgflag} alt="Bandera" />
         <h4> <Link to= "/home" > HOME </Link>  </h4> 
+        <h3>El Detalle de cada País</h3>
+        <div> {unpais.name} </div>
+        <div> {unpais.continent} </div>
+        <div> {unpais.capital} </div>
+        <div> {unpais.subregion} </div>
+        <div> {unpais.area} </div>
+        <div> {unpais.population} </div>
+        <div> {unpais.id} </div>
+        { turis.map(m =>  <div key = {m.name} >  Actividad:   {m.name}  season:   {m.season}  difficulty {m.difficulty}  </div>)}
+       
+       
+        
+        
+               
  
     </div>
 }
+
+// <div> {unpais.activities.map(act=>{
+//             <div> {act.name} </div>
+//         })} </div>

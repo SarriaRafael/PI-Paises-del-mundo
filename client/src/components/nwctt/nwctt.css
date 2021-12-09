@@ -1,0 +1,77 @@
+.m1{
+    display: flex;
+    padding: 0;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    color: #f3f3f3;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 10%;
+}
+
+.ingresar{
+    background-color: #130fdf;
+    color: #f3f3f3;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 10%;
+}
+
+.pareja{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+#tercero{
+    background: url("../img/turis1.png");
+ 
+   /* Full height    height: 65px;  */
+   
+   min-height: 97vh;
+ 
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.volver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 35px;
+    background: #ff0000;
+    color: #FFF;
+    font-size: 20px;
+}
+.toDoInput {
+    outline: none;
+    width: 75%;
+    padding-left: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .addButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 30%;
+    cursor: pointer;
+    height: 35px;
+    background: #53ff03;
+    color: rgb(17, 0, 255);
+    font-size: 20px;
+  }
+ 

@@ -24,20 +24,27 @@ export default function Lista(){
   // botones flechas
   function siguiente(e){
       e.preventDefault()
-      setIni(ini+10);
-      setNum(num+10);
+      if (num<lospaises.length) {
+        setIni(ini+10);
+        setNum(num+10);
+      }
+      
   }
 
   function anterior(e) {
       e.preventDefault()
-      setIni(ini-10);
-      setNum(num-10);
+      if (ini>=10) {
+        setIni(ini-10);
+        setNum(num-10);
+      }
+      
   }
 
 
   return <div>
       <button onClick={anterior} > <img src ='./botonizq' alt='<=' /> </button>  <button onClick={siguiente} > <img src ='./botonder' alt=' =>' /></button>
-        <div>Desde: {ini},  Hasta: {num}  </div>
+        <div>Desde: {ini},  Hasta: {num}   </div>
+        <div>De un total de {lospaises.length} </div>
       {decenas()}
       {arrlist.map((w) =>{
           return <Elelmentos key= {key++} id={w.id}  name= {w.name} imgflag={w.imgflag} continent= {w.continent} />
