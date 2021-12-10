@@ -3,19 +3,31 @@
     padding: 0;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 2px solid #f3851b; ;
     text-decoration: none;
     color: #f3f3f3;
-    font-weight: 600;
-    transition: 0.4s;
-    border-radius: 10%;
+    /* background-color: #0000008a; */
+    border-radius: 0%;
+    font-weight: 600;   
+    
+}
+
+#headnew{
+    margin: 0%;
+    width: 50%;
+    border-radius: 0%;
+    color: #f3851b; 
+    background-color: #4d0b0b8a;
+    border-bottom: 2px solid #f3851b; 
 }
 
 .ingresar{
-    background-color: #130fdf;
-    color: #f3f3f3;
+    background-color: #000000a8;
+    color: #f8a85d;
     font-weight: 600;
-    transition: 0.4s;
+    font-size: 16px;
     border-radius: 10%;
+    font-family: Roboto;
 }
 
 .pareja{
@@ -27,8 +39,23 @@
     margin-bottom: 25px;
 }
 
+.emergen{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
+    
+    color: #f3f3f3;
+    background-color: #0000008a;
+    border-radius: 20%;
+    
+}
 #tercero{
-    background: url("../img/turis1.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../img/turis1.png") no-repeat center center fixed ;
  
    /* Full height    height: 65px;  */
    
@@ -53,12 +80,17 @@
     font-size: 20px;
 }
 .toDoInput {
-    outline: none;
-    width: 75%;
-    padding-left: 10px;
-    font-size: 20px;
-    border: none;
-    border-radius: 4px;
+    background: rgba(0,0,0,0.55);
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #f3851b; 
+      width: 70%;
+      padding: 12px;
+      margin-top: 20px;
+      border-radius: 2px;
+      font-size: 14px;
+      color: #fff;
+      font-family: Roboto;
   }
 
   .addButton {
@@ -70,8 +102,9 @@
     border-radius: 30%;
     cursor: pointer;
     height: 35px;
-    background: #53ff03;
+    background: #767c73;
     color: rgb(17, 0, 255);
     font-size: 20px;
   }
+ 
  

@@ -12,8 +12,14 @@ export default function Home(){
   dispatch(rafaturist());
 
   return  <div id="segundo" >
-          <h1> HOME </h1>
-          <Link to="/activitynew"  className= "cambiar"   > ingresar nueva actividad</Link>
+                
+          
+            <div className="ingreboton" >  
+            <Link to="/activitynew"  className= "cambiar"   > ok </Link>
+            
+            Ingresa nuevas actividades y nuevas ralciones   
+            </div>
+              
           
                <Menu/>          
           

@@ -26,13 +26,20 @@ export default function Ordenar(){
 
   return <div id='orden' > 
                  
-      <div onChange={(e)=>ordenarpor(e)} >
-        <label  className="makle" >Ordenar por:  </label >  
+      <div onChange={(e)=>ordenarpor(e)}  className="nano"  >
+        
         <div className="mak" >
-          <input type="radio" name="ordenlist" value="name"  /><label  className="makle" >  Orden alf </label > 
-          <input type="radio" name="ordenlist"value="population" /> <br/><label  className="makle" >  Habitantes </label > 
-          <input type="checkbox" id="cbox1"  onChange={() => setUpdw(!updw)}  />   <label  className="makle" > Asendente / Desenden  </label > 
+          <label  className="makle" >Ordenar por:  </label >  
+          
+          <label  className="makle" >  Orden alfabetico  <input type="radio" name="ordenlist" value="name"  />  </label > 
+          
+          <label  className="makle" >  Numero de Habitantes    <input type="radio" name="ordenlist"value="population" />       </label > 
         </div>
+
+        <div  className="makle"  > En Orden :  <input type="checkbox" id="cbox1"  onChange={() => setUpdw(!updw)}  />   <label  className="makle" > Asendente / Desenden  </label > 
+            </div>
+        
+        
       </div>
       <Lista/>
           

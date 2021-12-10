@@ -71,10 +71,10 @@ export default function Menu(){
     return <div  >                 
        
            <div className="pares" >
+                { existen.map(m =>  <div key = {m.name} className="ingresar" >Actividad:   {m.name}    </div>)}
                 <input type="text"   placeholder='Nombe'   onChange={(e) => activtraer(e)} /> 
                 <label className="find" >Filtrar países por tipo de actividad turística </label>                
-                { existen.map(m =>  <div key = {m.name} className="ingresar" >Actividad:   {m.name}    </div>)}
-            </div>   
+           </div>   
             <div className="pares" > 
                <label className="find" >Filtrar países por continente</label>
 
@@ -91,7 +91,7 @@ export default function Menu(){
                <button onClick={(e)=>handleChange(e)} className= "rafboton" >Aplicar Filtros</button>             
             </div> 
       
-       <div>
+       <div className="bucarpornombre"  >
        <label className="find" >Encontrar un país por nombre</label> 
        <input type="text"      onChange={(e) => algotraer(e)} /> <br/>
        { dsp.map(m =>  <div className="find" key = {m.name} >Pais: <Link to= {`/detalle/${m.id}`} className="find" > {m.name} </Link>   </div>)}

@@ -23,8 +23,11 @@ export default function Detalle(){
      },[id])        
 
     return <div id="tercer" >
-        <h4> <Link to= "/home" > HOME </Link>  </h4> 
-        <h3>El Detalle de cada País</h3>
+        
+    <div className="detallehead" >
+        
+        
+        <div> <img src= {unpais.imgflag}/> </div>
         <div> Nombre:  {unpais.name} </div>
         <div> Continente: {unpais.continent} </div>
         <div> Capital: {unpais.capital} </div>
@@ -32,15 +35,15 @@ export default function Detalle(){
         <div> Area: {unpais.area} </div>
         <div> Poblacion: {unpais.population} </div>
         <div> ID:  {unpais.id} </div>
+    </div>
         <div id='actvlist' >
              { turis.map(m =>  <div key = {m.name} > <div> Actividad:  </div> {m.name} <div>season:   {m.season}</div>  <div> difficulty {m.difficulty}</div>  </div>)}
         </div>
        
-        
-        
                
- 
-    </div>
+ <h2 className="volverhome" >El País: Sus características y sus Actividades turística  </h2>
+ <h4> <Link to= "/home" className="volverhome" > HOME </Link>  </h4> 
+</div>
 }
 
 // <div> {unpais.activities.map(act=>{

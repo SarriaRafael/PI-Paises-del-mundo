@@ -7,11 +7,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px;    
+    padding: 5px;    
+    border-bottom: 2px solid #f3851b; 
 }
 
 .find{
-    background-color: #130fdf;
+    background-color: #0f8cdf8a;
     color: #f3f3f3;
     font-weight: 600;
     border-radius: 10%;
@@ -24,4 +25,8 @@
     background: #53ff03;
     color: rgb(17, 0, 255);
     
+  }
+
+  .bucarpornombre{
+      width: 200px;
   }

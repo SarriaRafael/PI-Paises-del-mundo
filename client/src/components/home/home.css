@@ -5,7 +5,9 @@
 
 #segundo{
     display: flex;
-    background: url("../img/mundo_animado.gif");
+    background: url("../img/mundo_animado.gif") no-repeat center center fixed ;
+    padding: 0%;
+    justify-content: space-between;
  
    /* Full height    height: 65px;  */
    
@@ -21,11 +23,24 @@
     
     justify-content: center;
     align-items: center;
-    width: 100px;
+    border:12px;
+    width: 80px;
     border-radius: 4px;
     cursor: pointer;
-    height: 75px;
+    height: 80px;
     background: #ff0000;
     color: #FFF;
-    font-size: 20px;
+    font-size: 80px;
+    font-family: Roboto;
+}
+
+.ingreboton{
+    background-color: #000000a8;
+    color: #f8a85d;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10%;
+    font-family: Roboto;
+    width: 100px;
+    height: 195px;
 }

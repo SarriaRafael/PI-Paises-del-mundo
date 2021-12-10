@@ -61,46 +61,61 @@ export default function Nwctt(){
              }
 
 
-          async  function asingactivcout(e){
+        async  function asingactivcout(e){
                 e.preventDefault();
                // console.log(dsp);
-               setCampos({...campos, idpais: dsp[0].id});
-               //await axios.post("http://localhost:3001/activity", campos);     
+               if (dsp.length>0) {
+                   
+               
+               setCampos({...campos, idpais: dsp[0].id});  //await axios.post("http://localhost:3001/activity", campos);     
 
-                setActivcout([...activcout,dsp[0].name]);     // ???????????????
+                setActivcout([dsp[0].name]);     // ??????????????? setActivcout([...activcout,dsp[0].name]); 
                 console.log(campos);
-                //despues de llamat a axios.....);
-
+                //despues de llamar a axios.....);
             }
+
+        }
 
             function traerunpais(e){
                // toLocaleLowerCase()  includes()
                let h = cosas.filter((k) => k.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())  );
                if (e.target.value.length<1)h=[];
-                h = h.map(x=> {return {id: x.id, name: x.name}} );
-               setDsp(h);
-                
-               
+
+               let k = h.map(x=> {return {id: x.id, name: x.name}} );
+               setDsp(k);
+               h=[];
+               k=[];
+                               
             }
 
-               
+               function desasignar(e) {
+                   e.preventDefault();
+                   setCampos({
+                       ...campos,
+                       idpais: ''
+                });
+
+                setActivcout([]);
+
+               }
     
 
 
     return <div id="tercero" >
+         <h1 id='headnew' >Ingreso actividades y relaciones nuevas </h1>
         
         <form  onSubmit={handlerSubmit}  className="m1"   >
             <div className="pareja" id= "inputContainer" >
-                <input type="text" placeholder='Nombe' name="name" value={campos.name} onChange={anyChange} className="toDoInput" />          
                 <label className="ingresar" >Nombre de la actividad</label>
+                <input type="text" placeholder='Nombe' name="name" value={campos.name} onChange={anyChange} className="toDoInput" />          
             </div>  
             <div  className="pareja" >
                 <label className="ingresar" >Dificultad de la actividad</label>
                 <input name="difficulty" value={campos.difficulty} min='1' max='5' placeholder='De 1 a 5' onChange={(e) => anyChange(e)} className="toDoInput" />
             </div>
-            <div className="pareja" >
+            <div className="pareja" > 
+                <label className="ingresar" >Duracion de la actividad(horas)</label> 
                 <input type="text" placeholder='De 1 a 24' name="duration" value={campos.duration}  min='1' max='24' onChange={anyChange} className="toDoInput" />
-                <label className="ingresar" >Duracion de la actividad(horas)</label>            
             </div>
             <div className="pareja" >
                 <label className="ingresar" >Temporada para realizar la actividad</label>
@@ -117,25 +132,28 @@ export default function Nwctt(){
         </form>
 
         <div className="pareja"  >
-            { existen.map(m =>  <div key = {m.name} className="ingresar" >Actividad:   {m.name}    </div>)}
-            <h2>Asignar a los paises con la nueva actividad</h2>
+            { existen.map(m =>  <div key = {m.name} className="emergen" >Actividad:   {m.name}    </div>)}
+            
         </div>
-
+        
         <form onSubmit= {asingactivcout} className="m1"  >
             <div className="pareja" >
-                <label className="ingresar" >Nombre del pais</label>
+                <label className="ingresar" >País a relacionar</label>
                 <input type="text" placeholder="Pais Tal..."   disabled= {false}  onChange={traerunpais} className="toDoInput"  />
             </div>
-
+    
             <div className="pareja" >
-                {activcout.length>0?<h2>Lista de paises con esta actividad</h2>:""}
-                { activcout.map(m =>  <div key = {m}  className="ingresar"  > {m} </div>) }
+                {activcout.length>0?<h2 className="ingresar" >Pais a relacionar:</h2>:""}
+                { activcout.map(m =>  <div key = {m}  className="ingresar"  > {m} Ó <button  onClick={desasignar}  >X</button> </div>) }
             </div>
         </form>
+        
             <div className="pareja" >        
                 { dsp.map(m=> dsp.map(m =>  <div key = {m.name} className="ingresar" >{m.name}    </div>)  ) }
-                <button  onClick={asingactivcout} className= "addButton" >Asignar</button>
-                <h1>Ingreso de nueva actividad</h1>
+                {dsp.length>0?<button  onClick={asingactivcout} className= "addButton" >Asignar</button>:"" }
+                                
+                
+               
                 <Link to="/home" className="volver" >volver</Link>
             </div>
     </div>

@@ -1,21 +1,27 @@
 
 .mak{
     display: flex;
+    /* flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 0px;  
+    align-items: center; */
+    padding: 20px;  
+    width:300px
       
 }
 
 .makle{
-    background-color: #130fdf;
+    background-color: #5ea7e25e;
     color: #f3f3f3;
     font-weight: 600;
-    border-radius: 10%;
+    border-radius: 2%;
+    padding: 10px; 
+    
 }
 #orden{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;  
 }
+
+/* .nano{
+    width: 300px;
+
+} */

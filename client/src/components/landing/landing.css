@@ -1,6 +1,38 @@
 #welcome{
     
-    background: #0703ffd8;
-    color: rgb(112, 211, 145);
+    background: #03ffff11;
+    color: rgb(240, 46, 46);
+    width: 700px;
+    height: 50px;
     
+}
+
+.Applanding{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(93, 214, 198);
+    color: rgb(235, 37, 192);
+    width: 30px;
+    height: 200px;
+    cursor: pointer;
+
+
+}
+#start{
+    background: url("../img/intespues.png");
+    padding: 0px;  
+    height: 45px;
+    width: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
 }

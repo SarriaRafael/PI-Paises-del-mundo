@@ -4,14 +4,14 @@
     justify-content: center;
     align-items: center;
     padding: 0px;  
+    width:800px;
       
 }
 .indicador{
-    background-color: #130fdf;
-    color: #f3f3f3;
+    background-color:#f3851b;
+    color:  #000000;
     font-weight: 600;
-    transition: 0.4s;
-    border-radius: 10%;
+    
 }
 #botonizq{
     background: url("../img/botonIzqu.png");
@@ -21,6 +21,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
 }
 #btnder{
     background: url("../img/botonDerecha.png");
@@ -30,4 +31,5 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
 }
