@@ -5,7 +5,7 @@
 # Individual Project - Henry Countries
 
 <p align="left">
-  <img height="200" src="./countries.png" />
+  <img height="800" src="./Proyecto Ind.png" />
 </p>
 
 ## Objetivos del Proyecto
@@ -16,33 +16,18 @@
 - Aprender y practicar el workflow de GIT.
 - Usar y practicar testing.
 
-## Horarios y Fechas
 
-El proyecto tendrá una duración máxima de tres semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
 
 ## Comenzando
 
- 1. Forkear el repositorio para tener una copia del mismo en sus cuentas
- 2. Clonar el repositorio en sus computadoras para comenzar a trabajar
-
-Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
+ 1. Clonar el repositorio en sus computadoras para comenzar a trabajar
 
 __IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
 
-Actualmente las versiónes necesarias son:
-
- * __Node__: 12.18.3 o mayor
- * __NPM__: 6.14.16 o mayor
-
-Para verificar que versión tienen instalada:
-
-> node -v
->
-> npm -v
-
+ 
 ## BoilerPlate
 
-El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
+El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas están el código del back-end y el front-end respectivamente.
 
 En `api` crear un archivo llamado: `.env` que tenga la siguiente forma:
 
@@ -60,27 +45,14 @@ El contenido de `client` fue creado usando: Create React App.
 
 ## Enunciado
 
-La idea general es crear una aplicación en la cual se pueda ver información de  distintos paises utilizando la api externa [restcountries](https://restcountries.com/) y a partir de ella poder, entre otras cosas:
+La idea general es una aplicación en la cual se pueda ver información de  distintos paises utilizando la api externa [restcountries](https://restcountries.com/) y a partir de ella poder, entre otras cosas:
 
   - Buscar paises
   - Filtrarlos / Ordenarlos
   - Crear actividades turísticas
 
-__IMPORTANTE__: Para las funcionalidades de filtrado y ordenamiento NO pueden utilizar los endpoints de la API externa que ya devuelven los resultados filtrados u ordenados sino que deben realizarlo ustedes mismos. En particular alguno de los ordenamientos o filtrados debe si o si realizarse desde el frontend.
 
-### Únicos Endpoints/Flags que pueden utilizar
-
-  - GET https://restcountries.com/v3/all
-  - GET https://restcountries.com/v3/name/{name}
-  - GET https://restcountries.com/v3/alpha/{code}
-
-### Requerimientos mínimos:
-
-A continuación se detallaran los requerimientos mínimos para la aprobación del proyecto individial. Aquellos que deseen agregar más funcionalidades podrán hacerlo. En cuanto al diseño visual no va a haber wireframes ni prototipos prefijados sino que tendrán libertad de hacerlo a su gusto pero tienen que aplicar los conocimientos de estilos vistos en el curso para que quede agradable a la vista.
-
-__IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estilos a la aplicación. Tendrán que utilizar CSS con algunas de las opciones que vimos en dicha clase (CSS puro, CSS Modules o Styled Components)
-
-#### Tecnologías necesarias:
+#### Tecnologías:
 - [ ] React
 - [ ] Redux
 - [ ] Express
@@ -88,23 +60,23 @@ __IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estil
 
 #### Frontend
 
-Se debe desarrollar una aplicación de React/Redux que contenga las siguientes pantallas/rutas.
+Se desarrollo una aplicación de React/Redux que contiene las siguientes pantallas/rutas.
 
-__Pagina inicial__: deben armar una landing page con
+__Pagina inicial__: Una landing page con
 - [ ] Alguna imagen de fondo representativa al proyecto
 - [ ] Botón para ingresar al home (`Ruta principal`)
 
-__Ruta principal__: debe contener
+__Ruta principal__: Contiene
 - [ ] Input de búsqueda para encontrar países por nombre
-- [ ] Área donde se verá el listado de países. Al iniciar deberá cargar los primeros resultados obtenidos desde la ruta `GET /countries` y deberá mostrar su:
+- [ ] Área donde se verá el listado de países. Al inicia carga los primeros resultados obtenidos desde la ruta `GET /countries` y muestra su:
   - Imagen de la bandera
   - Nombre
   - Continente
 - [ ] Botones/Opciones para filtrar por continente y por tipo de actividad turística
 - [ ] Botones/Opciones para ordenar tanto ascendentemente como descendentemente los países por orden alfabético y por cantidad de población
-- [ ] Paginado para ir buscando y mostrando los siguientes paises, 10 paises por pagina, mostrando los primeros 9 en la primer pagina.
+- [ ] Paginado para ir buscando y mostrando los siguientes paises, 10 paises por pagina.  
 
-__Ruta de detalle de país__: debe contener
+__Ruta de detalle de país__: Contiene
 - [ ] Los campos mostrados en la ruta principal para cada país (imagen de la bandera, nombre, código de país de 3 letras y continente)
 - [ ] Código de país de 3 letras (id)
 - [ ] Capital
@@ -113,7 +85,7 @@ __Ruta de detalle de país__: debe contener
 - [ ] Población
 - [ ] Actividades turísticas con toda su información asociada
 
-__Ruta de creación de actividad turística__: debe contener
+__Ruta de creación de actividad turística__: Contiene
 - [ ] Un formulario __controlado__ con los siguientes campos
   - Nombre
   - Dificultad
@@ -124,7 +96,7 @@ __Ruta de creación de actividad turística__: debe contener
 
 #### Base de datos
 
-El modelo de la base de datos deberá tener las siguientes entidades (Aquellas propiedades marcadas con asterísco deben ser obligatorias):
+El modelo de la base de datos Contiene las siguientes entidades (Aquellas propiedades marcadas con asterísco deben ser obligatorias):
 
 - [ ] País con las siguientes propiedades:
   - ID (Código de 3 letras) *
@@ -134,7 +106,8 @@ El modelo de la base de datos deberá tener las siguientes entidades (Aquellas p
   - Capital *
   - Subregión
   - Área
-  - Población
+  - Población.
+
 - [ ] Actividad Turística con las siguientes propiedades:
   - ID
   - Nombre
@@ -142,30 +115,23 @@ El modelo de la base de datos deberá tener las siguientes entidades (Aquellas p
   - Duración
   - Temporada (Verano, Otoño, Invierno o Primavera)
 
-La relación entre ambas entidades debe ser de muchos a muchos ya que un país puede contener varias actividades turísticas y, a su vez, una actividad turística puede darse en múltiples países. Por ejemplo una actividad podría ser "Ski" que podría ocurrir en Argentina y también en Estados Unidos, pero a su vez Argentina podría también incluir "Rafting".
+La relación entre ambas entidades es de muchos a muchos ya que un país puede contener varias actividades turísticas y, a su vez, una actividad turística puede darse en múltiples países. Por ejemplo una actividad podría ser "Ski" que podría ocurrir en Argentina y también en Estados Unidos, pero a su vez Argentina podría también incluir "Rafting".
 
 #### Backend
 
-Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
-
-__IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
+Se desarrollo un servidor en Node/Express con las siguientes rutas:
 
 - [ ] __GET /countries__:
-  - En una primera instancia deberán traer todos los países desde restcountries y guardarlos en su propia base de datos y luego ya utilizarlos desde allí (Debe almacenar solo los datos necesarios para la ruta principal)
-  - Obtener un listado de los paises.
+  - En una primera instancia trae todos los países desde restcountries y los guarda en su propia base de datos y luego ya utilizarlos desde allí ( Almacenar solo los datos necesarios para la ruta principal)
+  - Obtiene un listado de los paises.
 - [ ] __GET /countries/{idPais}__:
-  - Obtener el detalle de un país en particular
-  - Debe traer solo los datos pedidos en la ruta de detalle de país
-  - Incluir los datos de las actividades turísticas correspondientes
+  - Obtiene el detalle de un país en particular
+  - Trae solo los datos pedidos en la ruta de detalle de país
+  - Incluye los datos de las actividades turísticas correspondientes
 - [ ] __GET /countries?name="..."__:
-  - Obtener los países que coincidan con el nombre pasado como query parameter (No necesariamente tiene que ser una matcheo exacto)
+  - Obtiene los países que coincidan con el nombre pasado como query parameter (No necesariamente tiene que ser una matcheo exacto)
   - Si no existe ningún país mostrar un mensaje adecuado
 - [ ] __POST /activity__:
   - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de actividad turística por body
   - Crea una actividad turística en la base de datos
 
-
-#### Testing
-- [ ] Al menos tener un componente del frontend con sus tests respectivos
-- [ ] Al menos tener una ruta del backend con sus tests respectivos
-- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
