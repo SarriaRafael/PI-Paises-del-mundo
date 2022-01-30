@@ -10,8 +10,9 @@
 
 ## Objetivos del Proyecto
 
-- Construir una App utlizando React, Redux, Node y Sequelize.
-- Afirmar y conectar los conceptos aprendidos en la carrera.
+- Este proyecto ha sido construido como una App.
+- Utlizando React, Redux, Node y Sequelize.
+- Para Afirmar y conectar los conceptos aprendidos en la carrera.
 - Aprender mejores prácticas.
 - Aprender y practicar el workflow de GIT.
 - Usar y practicar testing.
@@ -20,7 +21,7 @@
 
 ## Comenzando
 
- 1. Clonar el repositorio en sus computadoras para comenzar a trabajar
+ 1. Clonar el repositorio 
 
 __IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
 
